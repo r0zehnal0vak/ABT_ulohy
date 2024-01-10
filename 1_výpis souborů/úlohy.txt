@@ -1,0 +1,24 @@
+Úloha 1
+
+Vypište příkazy Powershellu, které obsahují parametr ComputerName.
+--------------------------------------------------------------------------------------------------
+Get-Command -ParameterName ComputerName
+--------------------------------------------------------------------------------------------------
+
+Úloha 2
+
+Vypište soubory sestupně dle velikosti, které jsou větší než 100000 bytů.
+--------------------------------------------------------------------------------------------------
+Get-ChildItem . -recurse | where-object {$_.length -gt 100000} | Sort-Object length
+--------------------------------------------------------------------------------------------------
+
+Úloha 3
+
+Modifikujte profil Powershellu tak, aby se po spuštění vypsala žlutou barvou informace o aktuální "execution policy" a zelenou barvou cesta k tomuto profilu. 
+--------------------------------------------------------------------------------------------------
+$ExecutionPolicy = Get-ExecutionPolicy
+Write-Host "Aktuální Execution Policy: $ExecutionPolicy" -ForegroundColor Yellow
+
+$ProfilePath = $Profile
+Write-Host "Cesta k profilu: $ProfilePath" -ForegroundColor Green
+--------------------------------------------------------------------------------------------------

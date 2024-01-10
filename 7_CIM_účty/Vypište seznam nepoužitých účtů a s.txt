@@ -1,0 +1,43 @@
+Vypište seznam nepoužitých účtů a seznam uzamčených účtů:
+$users = Get-CimInstance -ClassName Win32_UserAccount
+$nepouziteUcty = $users | Where-Object { $_.LastLogon -lt $date }
+
+Write-Host "Nepoužité účty:"
+$nepouziteUcty | Select-Object Name, LastLogon
+Write-Host "Uzamčené účty:"
+$uzamceneUcty = $users | Where-Object { $_.Disabled -eq $true }
+$uzamceneUcty | Select-Object Name
+
+
+
+Použijte vhodný cmdlet a poté totéž udělejte pomocí CIM rozhraní:
+$users = Get-WmiObject -Class Win32_UserAccount
+$nepouziteUcty = $users | Where-Object { $_.Disabled -eq $false -and $_.Lockout -eq $false -and $_.LastLogon -lt $date }
+
+Write-Host "Nepoužité účty:"Cim
+$nepouziteUcty | Select-Object Name
+
+
+
+-------------------------------
+Vypište seznam nepoužitých účtů a seznam uzamčených účtů:
+
+$users = Get-WmiObject -Class Win32_UserAccount
+$nepouziteUcty = $users | Where-Object { $_.Disabled -eq $false -and $_.Lockout -eq $false -and $_.LastLogon -lt $date }
+$uzamceneUcty = $users | Where-Object { $_.Disabled -eq $false -and $_.Lockout -eq $true }
+
+Write-Host "Nepoužité účty:"
+$nepouziteUcty | Select-Object Name
+Write-Host "`nUzamčené účty:"
+$uzamceneUcty | Select-Object Name
+
+Cim rozhraní:
+
+$users = Get-LocalUser
+$nepouziteUcty = $users | Where-Object { $_.Enabled -eq $true -and $_.LastLogon -lt $date }
+$uzamceneUcty = $users | Where-Object { $_.Enabled -eq $true -and $_.Lockout -eq $true }
+
+Write-Host "Nepoužité účty:"
+$nepouziteUcty | Select-Object Name
+Write-Host "Neuzamčené účty:"
+$uzamceneUcty | Select-Object Name
