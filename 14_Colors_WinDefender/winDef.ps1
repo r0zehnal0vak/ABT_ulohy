@@ -1,7 +1,9 @@
-Update-MpSignature # update DB
+Update-MpSignature # aktualizace
 
-$thread = Get-MpThreatCatalog # Gets known threats from the definitions catalog 
-$threadCount = $thread.Count
+$threats = Get-MpThreatCatalog
+$threatCount = $threats.Count
 
-Write-Host "Celkový počet hrozeb: $threadCount"
+Write-Host "Počet detekcí hrozeb: $threatCount" # počet různých hrozeb, které dokáže detekovat
 
+$mostDetectedThreats = $threats| Sort-Object -Property DetectionCount -Descending | Select-Object -First 1 # Typ nejvíce detekované hrozby
+Write-Host "Nejvíce detekovaná hrozba: $($mostDetectedThreats.ThreatName)"
