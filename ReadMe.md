@@ -48,6 +48,7 @@ Stáhněte si knihu z adresy https://www.gutenberg.org/ebooks/308 ve formátu UT
 Vytvořte textový soubor obsahující text "Hello world." Pro předání parametrů použijte "splatting".
 
 Vypište z logu System události typu "Chyba" z posledních 10 dní. Pokud v logu žádnou chybu nemáte, zkuste "Upozornění". Použijte hashtable.
+- [x] Checked
 
 ### Úloha 10
 Vytvořte v Powershellu interaktivní textové rozhraní, které uživateli umožní procházet adresářovou strukturu.
