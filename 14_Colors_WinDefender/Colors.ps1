@@ -54,6 +54,6 @@ $colorNames = [Enum]::GetNames([System.ConsoleColor])
 foreach ($color in $colorNames) {
     $coloredText = Write-ColoredText -text $color -foregroundColor $color
     $customColoredText = Write-ColoredText -text $color -foregroundColor "White" -backgroundColor $color
-    $customColoredTextLimited = $customColoredText.Substring(0, [Math]::Min(20, $customColoredText.Length))
+    #$customColoredTextLimited = $customColoredText.Substring(0, [Math]::Min(20, $customColoredText.Length))
     Write-Output ("{0,-8}`t{1,-24}`t{2,-8}" -f $color, $coloredText, $customColoredText)
 }

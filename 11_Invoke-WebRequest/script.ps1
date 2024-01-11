@@ -29,7 +29,7 @@ function Start-dva{
 
     Write-Host "Obrázky stáhnuty: $outputPath"
 }
-Start-dva
+#Start-dva
 
 function Start-tri{
     $apiUrl = "https://worldtimeapi.org/api/timezone/Europe/Prague"
@@ -40,4 +40,4 @@ function Start-tri{
     Set-Date -Date $currentTime
     Write-Output "Systémový čas byl změněn na $currentTime"
 }
-Start-tri
+#Start-tri
