@@ -91,3 +91,9 @@ Aktualizujte si antivirovou databázi. Kolik různých hrozeb je schopen detekov
 ### Úloha 15
 Vytvořte skript, který bude v pravidelných intervalech ukládat obsah obrazovky do adresáře "Obrázky" v uživatelském profilu.
 - [ ] Checked
+
+### Úloha 16
+Pomocí příkazu PowerShellu mi pošlete mail ze své adresy na adresu jirsamilan@gmail.com.
+
+Vytvořte skript, který vypíše úspěšná a neúspešná přihlášení uživatelů MS Windows. V případě neúspěšného přihlášení vypište i důvod neúspěchu.
+- [ ] Checked
