@@ -1,22 +1,22 @@
-# Vypište seznam nepoužitých úètù a seznam uzamèených úètù:
+# Vypiï¿½te seznam nepouï¿½itï¿½ch ï¿½ï¿½tï¿½ a seznam uzamï¿½enï¿½ch ï¿½ï¿½tï¿½:
 
 $users = Get-WmiObject -Class Win32_UserAccount
 $nepouziteUcty = $users | Where-Object { $_.Disabled -eq $false -and $_.Lockout -eq $false -and $_.LastLogon -lt $date }
 $uzamceneUcty = $users | Where-Object { $_.Disabled -eq $false -and $_.Lockout -eq $true }
 
-Write-Host "Nepoužité úèty:"
+Write-Host "Nepouï¿½itï¿½ ï¿½ï¿½ty:"
 $nepouziteUcty | Select-Object Name
-Write-Host "`nUzamèené úèty:"
+Write-Host "`nUzamï¿½enï¿½ ï¿½ï¿½ty:"
 $uzamceneUcty | Select-Object Name
 
-# Cim rozhraní:
+# Cim rozhranï¿½:
 
 $users = Get-LocalUser
 $nepouziteUcty = $users | Where-Object { $_.Enabled -eq $true -and $_.LastLogon -lt $date }
 $uzamceneUcty = $users | Where-Object { $_.Enabled -eq $true -and $_.Lockout -eq $true }
 
-Write-Host "Nepoužité úèty:"
+Write-Host "Nepouï¿½itï¿½ ï¿½ï¿½ty:"
 $nepouziteUcty | Select-Object Name
-Write-Host "Neuzamèené úèty:"
+Write-Host "Neuzamï¿½enï¿½ ï¿½ï¿½ty:"
 $uzamceneUcty | Select-Object Name
 

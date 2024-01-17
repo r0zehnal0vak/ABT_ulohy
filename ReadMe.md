@@ -85,15 +85,15 @@ Vytvořte skript, který vypíše co nejpodrobnější seznam nainstalovaného s
 Vytvořte skript, který vykreslí paletu 16 odstínů barev přednastavených v terminálu (viz obrázek dole).
 
 Aktualizujte si antivirovou databázi. Kolik různých hrozeb je schopen detekovat Windows Defender? Kterých hrozeb rozezná nejvíc?  
-- [ ] Checked
+- [x] Checked
 <img src="Untitled.png" width="420"/>
 
 ### Úloha 15
 Vytvořte skript, který bude v pravidelných intervalech ukládat obsah obrazovky do adresáře "Obrázky" v uživatelském profilu.
-- [ ] Checked
+- [x] Checked
 
 ### Úloha 16
 Pomocí příkazu PowerShellu mi pošlete mail ze své adresy na adresu jirsamilan@gmail.com.
 
 Vytvořte skript, který vypíše úspěšná a neúspešná přihlášení uživatelů MS Windows. V případě neúspěšného přihlášení vypište i důvod neúspěchu.
-- [ ] Checked
+- [x] Checked
