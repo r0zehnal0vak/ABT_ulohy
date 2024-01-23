@@ -97,3 +97,10 @@ Pomocí příkazu PowerShellu mi pošlete mail ze své adresy na adresu jirsamil
 
 Vytvořte skript, který vypíše úspěšná a neúspešná přihlášení uživatelů MS Windows. V případě neúspěšného přihlášení vypište i důvod neúspěchu.
 - [x] Checked
+
+### Úloha 17 - zkouška
+Zadejte z příkazové řádky příkaz netstat -a -o -p TCP. Vytvořte v Powershellu podobný přehled o TCP spojeních, který ale bude obsahovat místo PIDu jméno odpovídající aplikace a "cestu k souboru image", jak se to nazývá ve Správci úloh.
+
+Vytvořte soubor, zjistěte kdo má k němu přístupová práva, vypište celý SDDL. Ověřte, že jste jeho vlastníkem (owner). Zjistěte SID vlastníka. Převeďte SID "S-1-5-32-544" na jméno účtu.
+
+Vytvořte skript, který vypíše aktuální kurz usd/czk, eur/czk, btc/usd a tia/usd.
